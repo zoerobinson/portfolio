@@ -817,12 +817,11 @@ fieldset{
 fieldset{
   width: 70%;
 }
-
 }
 
 
 
-/* media query #2: reduce motion */
+/* media query #3: reduce motion */
 
 @media (prefers-reduced-motion: reduce) {
   nav a:hover {
