@@ -1,0 +1,774 @@
+body{
+  	background-color: white;
+  	font-size: 18px;
+    line-height:1.5;
+  	margin: 0;
+  	padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+header{
+  background: url("../images/dune-sunrise.JPG");
+  /* parallax effect */
+  background-attachment: fixed;    
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;     
+  height: 300px;               
+  grid-column: 1 / -1;
+  color: black; 
+  flex-direction: row;
+}
+
+header p{
+  color: black;
+  font-size: 24px;
+  padding: 0 100px;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
+}
+
+/* navbar */
+nav{
+    background-color: white;
+    padding: 5px 5px; 
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    grid-column: 1 / -1;
+    grid-row: 1 / span 1;
+}
+
+nav li{
+    display:block;
+    line-height: 1.1;
+
+}
+
+nav a{
+    color: black;
+    text-decoration: none; 
+}
+
+nav a:hover{
+    background: black;
+    color: white;
+}
+
+div.container li.selected a{
+  color: #A34739;
+  text-decoration: underline;
+}
+
+
+h1{
+  	font-size: 60px;
+  	line-height: 1.2;
+  	padding: 50px 0;
+  	text-align: center;
+    margin: 0 auto;
+    font-family: 'Playfair Display', serif;
+    color: white;
+    text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+
+h2{
+  	font-size: 32px;
+  	line-height: 1.5;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+
+h3{
+    font-size: 24px;
+    line-height: 1;
+    font-family: 'Playfair Display', serif;
+}
+
+/* skip to content hidden, transition in */
+.skip a{
+  	background: white;
+  	left: 0;
+  	padding: 6px;
+  	-webkit-transition: top 1s ease-out;
+  	transition: top 1s ease-out;
+  	z-index: 1;
+  	position: absolute;
+  	top: -40px;
+}
+
+/* move skip to content to top right of page when in focus */
+.skip a:focus{
+	top: 0;
+}
+ 
+/* add a border around content in focus */
+*:focus{
+ 	border: 2px solid black;
+ } 
+
+footer{
+  	background-color: white;
+  	color: black;
+  	grid-column: 1 / -1; 
+  	grid-row: 9 / span 1;
+    padding: 10px;
+  	text-align: center;
+}
+
+
+/* grid container */
+.container{
+  display: grid;
+  grid-template-columns: 50px auto 50px;
+  grid-template-rows: auto auto auto auto auto auto auto auto auto;
+  grid-row-gap: 15px;
+}
+
+/* Homepage (HP) styling */
+
+.about-text-block{
+  display: grid;
+  text-align: center;
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+}
+
+.quick-facts-block {
+  grid-column: 2 / span 1;
+  grid-row: 4 / span 1;
+  text-align: center;
+}
+
+/* HP - slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1f1;
+  min-height: 300px;
+  grid-column: 2 / span 1;
+  grid-row: 5 / span 1;
+}
+
+/* HP - slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  font-size: 1em;
+  text-align: center;
+}
+
+/* HP - next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -70px;
+  padding: 16px;
+  color: #A34739;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  font-size: 4em;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* HP - position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* HP - on hover, add a slightly opaque background color */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* HP - dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+  background: #ddd;
+  grid-column: 2 / span 1;
+  grid-row: 6 / span 1;
+}
+
+/* HP - dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* HP - Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #A34739;
+}
+
+
+/* HP - cards */
+.cards{
+    display: flex;
+    min-height: 300px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    grid-column: 2 / span 1;
+    grid-row: 8 / span 1; 
+}
+
+.cards-heading{
+  justify-content: center;
+  text-align: center;
+  grid-column: 2 / span 1;
+  grid-row: 7 / span 1;
+}
+
+.card {
+  margin: 10px;
+  background: #A34739;
+  border-radius: 7px;
+  padding: 15px;
+  flex-basis: 500px;
+}
+
+.card > p {
+  list-style: none;
+  padding: 10px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.card > ul li {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.card button{
+  width: 90%;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+  background: #ffffff; 
+  color: #000000;
+  font-size: 1.5em;
+  font-family: 'Playfair Display', serif;
+  border-radius: 7px;
+}
+
+.card button:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+.card > img{
+  width: 300px;
+  border: 0px solid #ffffff;
+  border-radius: 7px 7px 0 0;
+}
+
+.flip-cards{
+  display: flex;
+  max-height: 100px;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 10px 10px 10px;
+  grid-column: 2 / span 1;
+  grid-row: 4 / span 2; 
+}
+
+/* The flip card container */
+.flip-card {
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  border: none;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: white;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background: white;
+  color: black;
+  align-self: center;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back > h3 {
+  font-size: .75em;
+}
+
+
+/* History (H) styling */
+.history-text-block{
+  display: grid;
+  text-align: left;
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+}
+
+.history-gallery{
+  width: 90%;
+  padding: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  grid-column: 2 / span 1;
+  grid-row: 4 / span 1;
+}
+
+.history-caption{
+  font-size: 1.25em;
+  line-height: 1;
+  padding: 10px 0;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  color: black;
+  grid-column: 2 / span 1;
+  grid-row: 5 / span 1;
+}
+
+/* Culture (C) styling */
+.culture-text-block-1{
+  display: grid;
+  text-align: left;
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+}
+
+.culture-text-block-2{
+  display: grid;
+  text-align: left;
+  grid-column: 2 / span 1;
+  grid-row: 6 / span 1;
+}
+
+.culture-gallery{
+  width: 60%;
+  padding: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  grid-column: 2 / span 1;
+  grid-row: 6 / span 1;
+}
+
+.culture-caption{
+    font-size: 1.25em;
+    line-height: 1;
+    padding: 10px 0;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: black;
+    grid-column: 2 / span 1;
+    grid-row: 7 / span 1;
+}
+
+/* Travel (T) styling */
+.travel-text-block{
+  display: grid;
+  text-align: left;
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+}
+
+.travel-gallery{
+  width: 90%;
+  padding: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  grid-column: 2 / span 1;
+  grid-row: 4 / span 1;
+}
+
+.travel-caption{
+    font-size: 20px;
+    line-height: 1;
+    padding: 10px 0;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: black;
+    grid-column: 2 / span 1;
+    grid-row: 5 / span 1;
+}
+
+
+/* About (A) styling */
+
+.about-container{
+  display: grid;
+  grid-template-columns: 50px 1fr 50px;
+  grid-template-rows: repeat(9,auto);
+  margin: auto;
+  width: 95vw;
+  grid-row-gap: 5px;
+}
+
+.about-container div{
+  overflow: hidden;
+}
+
+.about-me-text-block{
+  display: grid;
+  text-align: left;
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+}
+
+/* A - gallery styling */
+.gallery{
+  display: grid;
+  text-align: left;
+  grid-column: 2 / span 1;
+  grid-row: 4 / span 1;
+}
+
+.gallery img {
+  object-fit: cover;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.img-one,.img-two,.img-three,.img-four,.img-five,.img-six,.img-seven,.img-eight,.img-nine{
+  padding: 30px;
+}
+
+
+.get-in-touch{
+  text-align: left;
+  grid-column: 2 / span 1;
+  grid-row: 7 / span 1;
+}
+
+.form{
+  grid-column: 1 / -1;
+  grid-row: 8 / span 1;
+  width: 100%;
+}
+
+/* form styling */
+fieldset{
+   border-radius: 10px;
+   margin: 0 auto;
+}
+
+fieldset div{
+   border: 2px solid black;
+   margin: 2%;
+   padding: 1%;
+   border-radius: 5px;
+}
+
+.contact{
+   display: grid;
+}
+{
+   border: 1px solid black;
+   width: 100%
+   padding: 3%;
+   margin-left: 10%;
+   -webkit-box-sizing: content-box;
+   -moz-box-sizing: content-box;
+   box-sizing: content-box;
+}
+
+div label{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.5em; 
+}
+
+input, textarea, select{
+  background-color:#FFFFFF;
+  min-height: 30px;
+  outline: solid 1px gray;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1em;
+}
+
+textarea #message{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1em;
+}
+
+form button {
+  background-color: #A34739;
+  border-radius: 7px;
+  font-family: 'Playfair Display', serif;
+  color: white;
+  font-size: 1.5em;
+}
+
+
+
+/* media query #1: TABLET view */
+
+@media screen and (min-width: 600px){
+/* navbar */
+nav{
+    padding: 20px 20px; 
+    text-align: center;
+    font-size: 1.25em;
+}
+
+nav li{
+    display:inline-block;
+    padding-left:20px;
+}
+
+nav a:hover{
+    padding: 5px 1px;
+}
+
+fieldset{
+  width: 90%;
+}
+
+}
+
+/* media query #2: DESKTOP view */
+
+@media screen and (min-width: 850px){
+
+  .container{
+  display: grid;
+  grid-template-columns: 200px auto 200px;
+  }
+
+  .slideshow-container {
+  min-height: 200px;
+  }
+
+  nav{
+    padding: 35px 20px;
+    text-align: right;
+    font-size: 1.5em;
+  }
+
+  nav a:hover{
+    padding: 10px 1px;
+  }
+
+  h1{
+    color: white;
+    font-size: 80px;
+    line-height: 1.2;
+    padding: 50px 0;
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Playfair Display', serif;
+  }
+
+
+  .card {
+    flex-basis: 250px;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .mySlides {
+  font-size: 1.5em;
+  }
+
+  .flip-cards{
+  display: flex;
+  max-height: 200px;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 10px 120px 10px;
+  grid-column: 2 / span 1;
+  grid-row: 4 / span 2; 
+}
+
+/* About (A) styling */
+
+.about-container{
+  display: grid;
+  grid-template-columns: 50px repeat(3,1fr) 50px;
+  grid-template-rows: repeat(9,auto);
+  margin: auto;
+  width: 95vw;
+  grid-row-gap: 5px;
+}
+
+.about-container div{
+  overflow: hidden;
+}
+
+.about-me-text-block{
+  display: grid;
+  text-align: left;
+  grid-column: 2 / span 3;
+  grid-row: 3 / span 1;
+}
+
+.gallery{
+  grid-column: 2 / span 3;
+  grid-row: 4 / span 3;
+  width:100%;
+  margin: 0 auto;
+/*  justify-content: space-between;*/
+}
+
+.gallery img {
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  transition: transform .5s ease;
+}
+
+.gallery img:hover{
+    -ms-transform: scale(1.5); 
+    -webkit-transform: scale(1.5); 
+    transform: scale(1.5);
+}
+
+.img-one{
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+  padding: 10px 10px;
+}
+
+.img-two{
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+  padding: 10px 10px;
+}
+
+.img-three{
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 1;
+  padding: 10px 10px;
+}
+
+.img-four{
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+  padding: 10px 10px;
+}
+
+.img-five{
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+  padding: 10px 10px;
+}
+
+.img-six{
+  grid-column: 3 / span 1;
+  grid-row: 2 / span 1;
+  padding: 10px 10px;
+}
+
+.img-seven{
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 1;
+  padding: 10px 10px;
+}
+
+.img-eight{
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+  padding: 10px 10px;
+}
+
+.img-nine{
+  grid-column: 3 / span 1;
+  grid-row: 3 / span 1;
+  padding: 10px 10px;
+}
+
+
+.get-in-touch{
+  text-align: left;
+  grid-column: 2 / span 3;
+  grid-row: 7 / span 1;
+}
+
+.form{
+  text-align: left;
+  grid-column: 2 / span 3;
+  grid-row: 8 / span 1;
+}
+
+/* The flip card container */
+.flip-card {
+  background-color: white;
+  width: 250px;
+  height: 250px;
+  border: none;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+.flip-card-back > h3 {
+  margin-top: 100px;
+}
+
+fieldset{
+  width: 70%;
+}
+
+}
+
+
+
+/* media query #2: reduce motion */
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto;
+  }
+
+  .skip a{
+    -webkit-transition: none;
+    transition: none;
+  }
+}

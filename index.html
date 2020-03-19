@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159987668-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-159987668-1');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="images/namibia-favicon.png"/>
+
+    <!-- Page title -->
+    <title>Namibia</title>
+  </head>
+
+  <body>
+    <main>
+    <!-- Skip to content -->
+    <div class="skip"><a href="#main" tabindex="1">Skip to Main Content</a></div>
+    <div class="container">
+      <nav>
+        <ul class="navbar">
+          <li class="selected"><a href="index.html" tabindex="2">Home</a></li>
+          <li><a href="history.html" tabindex="3">History</a></li>
+          <li><a href="culture.html" tabindex="4">Culture</a></li>
+          <li><a href="travel.html" tabindex="5">Travel</a></li>
+          <li><a href="about.html" tabindex="6">About</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header content -->
+      <header id="main">
+        <h1>Namibia:
+          <br>Land of the Brave</h1>
+      </header>
+
+      <!-- About -->
+      <div class="about-text-block">
+        <a id="about-text-block"></a>
+        <br>
+        <h2>Where in the World is Namibia?</h2>&nbsp;
+        <p>Namibia is located on the southwestern coast of Africa, just south of Angola and north of South Africa. It is also bordered by Zimbabwe, Zambia, and Botswana. The entire western coast of Namibia presses up against ocean, where sand dunes meet the chilly Atlantic waters.</p>
+        <br>
+      </div>
+
+      <div class="quick-facts-block">
+          <h2>Quick Facts About Namibia</h2>&nbsp;
+      </div>
+
+      <!-- Slideshow container -->
+      <div class="slideshow-container">
+      <!-- Full-width slides/quotes -->
+        <div class="mySlides">
+          <q>Namibia's land mass is the equivalent of Spain and Germany combined.</q>
+        </div>
+
+        <div class="mySlides">
+          <q>With 2 million people, it has the second lowest population density in the world.</q>
+        </div>
+
+        <div class="mySlides">
+          <q>Namibia is home to the world’s largest underground lake: Lake Otijkoto. </q>
+        </div>
+
+        <div class="mySlides">
+          <q>It is home to the Namib Desert, the largest desert in the world which runs along it’s Atlantic Ocean coast.</q>
+        </div>
+
+        <div class="mySlides">
+          <q>Within the Namib Desert is the highest sand dune in the world at 900 ft. tall.</q>
+        </div>
+
+        <div class="mySlides">
+          <q>80% of the entire country is desert.</q>
+        </div>
+
+        <div class="mySlides">
+          <q>Namibia, along with South Africa, was colonized by Germany.</q>
+        </div>
+
+        <div class="mySlides">
+          <q>English is the official language of Namibia.</q>
+        </div>
+
+        <!-- Next/prev buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+
+      <!-- Dots/bullets/indicators -->
+      <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+        <span class="dot" onclick="currentSlide(8)"></span>
+      </div>         
+      
+      
+      <div class="cards-heading">
+        <br><br><h2>Explore Namibia, a country where the ocean meets the desert.</h2>&nbsp;
+      </div>
+
+        <div class="cards">
+
+          <div class="card">
+              <a href="history.html">
+              <img src="images/zambezi.jpg" alt="Fishermen wading through the Zambezi River" style="width:100%"></a>
+              <p> Namibia has a dark and devistating history, but they have perservered and overcome. Learn more about their struggle for independence.</p>
+              <button onclick="history.html">History</button>
+            </div>
+
+          <div class="card">
+              <a href="culture.html">
+              <img src="images/sunset.jpeg" alt="Sun setting over a desert landscape" style="width:100%"></a>
+              <p> With more than 11 ethnic groups and 30 languages represented, learn how Namibia is home to great diversity and deep-rooted culture.</p>
+              <button onclick="culture.html">Culture</button>
+            </div>
+
+          <div class="card">
+              <a href="travel.html">
+              <img src="images/elephant.jpeg" alt="Group of elephants at a watering hole" style="width:100%"></a>
+              <p> Although Namibia is far from home, it provides incredible, one-in-a-lifetime experiences for tourists. Explore the other-worldly travel opportunities that Namibia has to offer.</p>
+              <button onclick="travel.html">Travel</button>
+            </div>
+
+        </div>
+
+    <!-- Slideshow functionality -->
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+  
+    <footer>
+      <p>© 2020 Zoe Robinson | Web Design Winter 2020</p>
+    </footer>
+    </div>
+    </main>
+  </body>
+</html>
