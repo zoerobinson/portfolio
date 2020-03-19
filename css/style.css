@@ -558,6 +558,12 @@ form button {
   font-size: 1.5em;
 }
 
+form legend {
+  text-align: center;
+  font-family:'Source Sans Pro', sans-serif;
+  font-size: 1.5em;
+}
+
 
 
 /* media query #1: TABLET view */
@@ -595,6 +601,12 @@ h2{
     line-height: 1.5;
 }
 
+h3{
+    font-size: 24px;
+    line-height: 1;
+    font-family: 'Playfair Display', serif;
+}
+
 fieldset{
   width: 90%;
 }
@@ -630,7 +642,7 @@ fieldset{
 
   header{
   height: 250px;               
-}
+  }
 
   h1{
     font-size: 100px;
@@ -642,7 +654,13 @@ fieldset{
   h2{
     font-size: 40px;
     line-height: 1.5;
-}
+  }
+
+  h3{
+    font-size: 30px;
+    line-height: 1;
+    font-family: 'Playfair Display', serif;
+  }
 
 .gallery img:hover{
     -ms-transform: scale(1.5); 
